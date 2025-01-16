@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638891614639",
+    "project_id": "attandance-app-ae815",
+    "storage_bucket": "attandance-app-ae815.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638891614639:android:6c42bfa2c910775042cf5a",
+        "android_client_info": {
+          "package_name": "com.tsabitah.attendence_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEMJXuAlAWZ1LtXSFBYUSXEwjjoiz5CmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
