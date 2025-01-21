@@ -23,36 +23,18 @@ class HomeScreen extends StatelessWidget {
               spacing: 40,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  margin: EdgeInsets.all(10),
-                  child: Expanded(
-                    child: InkWell(
-                      highlightColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen() ));
-                        // TODO - Ubah PLSSS hfjkahfjka
-                      },
-                      child: Column(
-                        spacing: 10,
-                        children: [
-                          // Jika tidak mau melakukan perubahan
-                          // Image.asset(name)
-
-                          // Jika mau modifikasi image
-                          Image(
-                            image: AssetImage('assets/images/ic_attend.png'),
-                            height: 100,
-                            width: 100,
-                          ),
-                          Text(
-                            "Attendance Report",
-                            style: Theme.of(context).textTheme.labelLarge,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                _buildMenuItem(
+                  context, 
+                  imagePath: 'assets/images/ic_permission.png', 
+                  label: 'Attendance Report', 
+                  destination: HomeScreen()
+                ),
+                
+                _buildMenuItem(
+                  context, 
+                  imagePath: 'assets/images/ic_attendance_history.png', 
+                  label: 'Attendance History', 
+                  destination: HomeScreen()
                 ),
                 
               ],
@@ -61,6 +43,47 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildMenuItem(
+    BuildContext context,{
+      required String imagePath,
+      required String label,
+      required Widget destination,
+
+    }
+  ) {
+    return Container(
+                margin: EdgeInsets.all(10),
+                child: Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => destination ));
+                      // TODO - Ubah PLSSS hfjkahfjka
+                    },
+                    child: Column(
+                      spacing: 10,
+                      children: [
+                        // Jika tidak mau melakukan perubahan
+                        // Image.asset(name)
+
+                        // Jika mau modifikasi image
+                        Image(
+                          image: AssetImage(imagePath),
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          label,
+                          style: Theme.of(context).textTheme.labelLarge,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
   }
 
   Future<bool> _onWillPop(BuildContext context) async {
@@ -97,6 +120,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       )
-    ));
+    )) ?? false;
+    // Supaya aler dialog tidak diesekusi
   }
 }
