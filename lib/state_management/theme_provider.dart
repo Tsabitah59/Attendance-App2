@@ -8,4 +8,8 @@ class ThemeProvider extends ChangeNotifier{
   }
 
   bool get isDarkTheme => _isDarkTheme;
+
+  void toggleTheme() {
+    
+  }
 }

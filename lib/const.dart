@@ -1,0 +1,3 @@
+const primaryDarkColor = ;
+
+const primaryLightColor = ;
