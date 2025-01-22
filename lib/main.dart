@@ -29,6 +29,17 @@ class AttandanceApp extends StatelessWidget {
           surfaceTintColor: Colors.white,
           backgroundColor: Colors.orange,
         ),
+
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.bold
+          )
+        ),
+
+        appBarTheme: AppBarTheme(
+          titleTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+          color: Colors.black
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true
       ),
