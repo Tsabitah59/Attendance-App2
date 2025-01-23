@@ -1,3 +1,3 @@
-const primaryDarkColor = ;
+// const primaryDarkColor = ;
 
-const primaryLightColor = ;
+// const primaryLightColor = ;

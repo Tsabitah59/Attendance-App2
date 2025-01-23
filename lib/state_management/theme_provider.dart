@@ -4,7 +4,7 @@ class ThemeProvider extends ChangeNotifier{
   bool _isDarkTheme = false;
 
   ThemeProvider() {
-    _loadTheme();
+    // _loadTheme();
   }
 
   bool get isDarkTheme => _isDarkTheme;
