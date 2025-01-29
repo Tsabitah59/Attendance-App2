@@ -1,5 +1,4 @@
 
-import 'package:attendence_app/services/timestamp_service.dart';
 import 'package:attendence_app/ui/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -60,8 +59,29 @@ Future<void> submitAttendanceReport (BuildContext context, String address, name,
           behavior: SnackBarBehavior.floating,
         )
       );
-      
     }
+  }).catchError((error) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          spacing: 10,
+          children: [
+            SvgPicture.asset(
+              'assets/icons/fi-rr-info.svg'
+            ),
+            Expanded(
+              child: Text(
+                  'Ups, $error'
+              )
+            )
+          ],
+        ),
+        backgroundColor: Colors.orangeAccent,
+        shape: StadiumBorder(),
+        behavior: SnackBarBehavior.floating,
+      )
+    );
+    Navigator.of(context).pop();
   });
 }
 
