@@ -1,3 +1,4 @@
+import 'package:attendence_app/services/attendance_service.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -24,12 +25,15 @@ Container buildSubmitButton(BuildContext context, Size size, XFile? image, TextE
             borderRadius: BorderRadius.circular(18),
             onTap: () {
               if (image == null || controllerName.text.isEmpty) {
-                // showSnackBar();
-                // TODO - SAMPE SINI AWOKAWOK KALAH KOK SAMA BELL
+                showSnackBar(context, "Please fill all the forms!");
               } else {
-                
+                submitAttendanceReport(context, address, controllerName.text.toString(), status, timeStamp);
               }
             },
+            child: Text(
+              "Submit Now"
+              // TODO - Styling JANLUP!!!!!
+            ),
           ),
         ),
       ),

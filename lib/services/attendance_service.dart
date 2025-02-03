@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 // Entry point for submitting the attendance report
 final CollectionReference dataCollection = FirebaseFirestore.instance.collection('attendance');
 
-Future<void> submitAttendanceReport (BuildContext context, String address, name, status, attendanceStatus, timeStamp) async{
+Future<void> submitAttendanceReport (BuildContext context, String address, name, attendanceStatus, timeStamp) async{
   showLoaderDialog(context);
   dataCollection.add(
     {
