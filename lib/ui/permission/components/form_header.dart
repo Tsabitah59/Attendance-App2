@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class FormHeader extends StatelessWidget {
   final String title;
-  final IconData icon;
+  final String icon;
 
   const FormHeader({super.key, required this.title, required this.icon});
   
@@ -16,7 +17,7 @@ class FormHeader extends StatelessWidget {
       child: Row(
         spacing: 20,
         children: [
-          Icon(icon),
+          SvgPicture.asset(icon),
           Text(title)
         ],
       ),
