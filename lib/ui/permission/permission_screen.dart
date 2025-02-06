@@ -10,10 +10,31 @@ class PermissionScreen extends StatefulWidget {
 class _PermissionScreenState extends State<PermissionScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      // appBar: ntar dikasih methodnya,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Card(
+            color: Colors.white,
+            margin: EdgeInsets.fromLTRB(10, 10, 10, 30),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            elevation: 5,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Form header
+                // Form Body
+                // Submit button
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
-  void requestPermission() {
-    // drop the code for permission request here 
-  }
+
 }
