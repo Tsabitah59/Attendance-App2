@@ -1,3 +1,4 @@
+import 'package:attendence_app/ui/attend/attendance_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   context, 
                   imagePath: 'assets/images/ic_permission.png', 
                   label: 'Attendance Report', 
-                  destination: HomeScreen()
+                  destination: AttendanceScreen()
                 ),
                 
                 _buildMenuItem(
