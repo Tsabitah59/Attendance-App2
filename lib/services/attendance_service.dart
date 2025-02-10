@@ -9,6 +9,7 @@ final CollectionReference dataCollection = FirebaseFirestore.instance.collection
 
 Future<void> submitAttendanceReport (BuildContext context, String address, name, attendanceStatus, timeStamp) async{
   showLoaderDialog(context);
+  // Buat data si usernya
   dataCollection.add(
     {
       'address' : address,

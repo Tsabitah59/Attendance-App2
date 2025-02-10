@@ -12,6 +12,4 @@ class DataService {
   Future<void> deleteData(String docId) {
     return dataCollection.doc(docId).delete();
   }
-
-  
 }
