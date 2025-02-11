@@ -6,7 +6,8 @@ class DeleteDialog extends StatelessWidget {
   final String documentId;
   final CollectionReference dataCollection;
 
-  const DeleteDialog({super.key, required this.documentId, required this.dataCollection, required Null Function() onConfirm});
+  // onConfirm dibuat nullable karena memang kebutuhannya yang cuma dipanggil di beberapa fungsi(?)
+  const DeleteDialog({super.key, required this.documentId, required this.dataCollection, Null Function()? onConfirm});
 
   @override
   Widget build(BuildContext context) {
