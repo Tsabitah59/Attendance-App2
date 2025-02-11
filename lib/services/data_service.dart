@@ -5,10 +5,12 @@ class DataService {
 
   // Untuk mendapatkan data
   Future<QuerySnapshot> getData() {
+    // get() adalah salah satu method yang disediakan oleh firebase
+    // Untuk mendapat atau membaca data
     return dataCollection.get();
   }
 
-  // Untuk membuang data
+  // Untuk membuang data dari database
   Future<void> deleteData(String docId) {
     return dataCollection.doc(docId).delete();
   }

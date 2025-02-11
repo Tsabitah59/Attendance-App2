@@ -6,7 +6,7 @@ class DeleteDialog extends StatelessWidget {
   final String documentId;
   final CollectionReference dataCollection;
 
-  const DeleteDialog({super.key, required this.documentId, required this.dataCollection});
+  const DeleteDialog({super.key, required this.documentId, required this.dataCollection, required Null Function() onConfirm});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,13 @@ class DeleteDialog extends StatelessWidget {
         TextButton(
           child: Text("Of Course!"),
           onPressed: () {
+            // Melakukan penghapusan data darii database dengan method dari data_service.dart
             dataCollection.doc(documentId).delete();
             Navigator.pop(context);
           }, 
         ),
-
+        
+        // Cuma buat menutup dialog
         TextButton(
           child: Text("No Pls ._."),
           onPressed: () {
